@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>CV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins: 200,300,400,500,600,700,800,900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+
+        body {
+            background: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            background: #fff;
+            margin: 50px;
+            box-shadow: 0 50px 75px rgba(0, 0, 0, 0.1);
+            border-left: 50px solid #fff;
+            border-right: 50px solid #fff;
+        }
+
+        .container .top {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            padding: 40px;
+            padding-bottom: 0;
+        }
+
+        .container .top .imgBx {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .container .top .imgBx .box {
+            position: relative;
+            width: 70%;
+            min-width: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+
+        .container .top .imgBx .box img {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container .top .profileText {
+            position: relative;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .container .top .profileText h3 {
+            font-size: 3em;
+            letter-spacing: 0.1em;
+            line-height: 1.2em;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .container .top .profileText h3 span {
+            position: relative;
+            font-size: 0.5em;
+            font-weight: 300;
+            top: -10px;
+        }
+
+        .container .contentBox {
+            position: relative;
+            min-height: 500px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            padding: 0 40px 40px;
+        }
+
+        .container .contentBox h3 {
+            border-left: 4px solid #ff8bb3;
+            paddingleft: 10px;
+            line-height: 1em;
+            font-weight: 600;
+            color: #333;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px margin-top:50px;
+        }
+
+        .container .contentBox ul {
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .container .contentBox ul li {
+            list-style: none;
+            margin: 25px 0;
+            line-height: 1em;
+            color: #333;
+            cursor: pointer display: flex;
+        }
+
+        .container .contentBox ul li ion-icon {
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #3590d2;
+        }
+
+        .container .contentBox ul.education {
+            flex-direction: column;
+            margin: 25px 0;
+
+        }
+
+        h5 {
+            color: #3590d2;
+        }
+
+        h4 {
+            color: #333;
+            font-weight: 500;
+            margin: 5px 0;
+        }
+
+        h6 {
+            color: #666;
+            font-weight: 300;
+            font-size: 1em;
+        }
+
+        .language li {
+            flex-direction: column;
+        }
+
+        .language li span {
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .language .percent {
+            position: relative;
+            width: 100%;
+            background: #e3e3e3;
+            height: 6px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: block;
+            overflow: hidden;
+        }
+
+        .language .percent div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #3590d2;
+        }
+
+        .container .contentBox ul.interest {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .container .contentBox ul.interest li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .container .contentBox ul.interest li .icon {
+            // position:relative;
+            //width:40px;
+            // height: 40px;
+            // background:#3590d2;
+            // color:#fff;
+            // border-radius: 5px;
+            //display: flex;
+            //justify-content: center;
+            //align-items: center;
+            //}
+            //.container .contentBox ul.interest li .icon ion-icon{
+            // color:#fff;
+            //margin-right:0;
+        }
+
+        p {
+            font-style: 300;
+        }
+
+        .rightSide {
+            padding-left: 40px;
+        }
+        .about .box{
+            display: flex;
+            flex-direction: row;
+            margin:20px 0;
+        }
+        .about .box .year_company{
+            min-width: 150px;
+            margin-bottom: 10px;
+        }
+        .about .box .year_company h5{
+            color:#333;
+            font-weight:600;
+        }
+        .about .box .year_company h5:nth-child(1){
+            color:#3590d2;
+        }
+        .about .box .text h4{
+            color:#3590d2;
+            font-size: 16px;
+            margin: 0;
+        }
+        .about.skills .box{
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            justify-content: center;
+            align-items: center;
+        }
+        .about.skills .box h4{
+            color:#333;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .about.skills .box .percent{
+            position:relative;
+            width: 100%;
+            height:10px;
+            background:#e3e3e3;
+        }
+        .about.skills .box .percent div{
+            position:absolute;
+            top:0;
+            left:0;
+            height:100%;
+            background:#3590d2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="imgBx">
+                <div class="box">
+                    <img src="https://media.istockphoto.com/vectors/female-avatar-profile-picture-vector-id817481360?k=20&m=817481360&s=612x612&w=0&h=r1rQwJXsravb7k_ZjK2VYJDiY36gYogqycxe5kTVOqc=">
+                </div>
+            </div>
+            <div class="profileText">
+                <h3>Gudipudi<br>Rushitha <br><span>student</span></h3>
+            </div>
+        </div>
+        <div class="contentBox">
+            <div class="leftSide">
+                <h3>ContactInfo</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                        <span class="text">+91 95********</span>
+                    </li>
+                    <li>
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <span class="text">rushithagudipudi@gmail.com </span>
+                    </li>
+                    <li>
+                        <span class="icon"><ion-icon name="earth-outline"></ion-icon></span>
+                        <span class="text">Rushitha Gudipudi-Linkedin</span>
+                    </li>
+                    <li>
+                        <span class="icon"><ion-icon name="location-outline"></ion-icon></span>
+                        <span class="text">Guntur, AP, India</span>
+                    </li>
+                </ul>
+                <h3>Education</h3>
+                <ul class="education">
+                    <li>
+                        <h5>2018 - 2019</h5>
+                        <h4>Secondary School Certificate Examination.</h4>
+                        <h6>Sri Chaitanya School</h6>
+                    </li>
+                    <li>
+                        <h5>2020 - 2022</h5>
+                        <h4>Board of Intermediate Education.</h4>
+                        <h6>Sri Chaitanya College</h6>
+                    </li>
+                    <li>
+                        <h5>2022 - 2025</h5>
+                        <h4> Bachelor Degree In Information Technology</h4>
+                        <h6>Vignan's Nirula College</h6>
+                    </li>
+                </ul>
+                <h3>Languages</h3>
+                <ul class="language">
+                    <li>
+                        <span class="text">HTML-5</span>
+                        <span class="percent">
+                            <div style="width:90%;"> </div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="text">CSS</span>
+                        <span class="percent">
+                            <div style="width:80%;"> </div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="text">Javascript</span>
+                        <span class="percent">
+                            <div style="width:60%;"> </div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="text">Python</span>
+                        <span class="percent">
+                            <div style="width:78%;"> </div>
+                        </span>
+                    </li>
+                </ul>
+                <h3>Interest</h3>
+                <ul class="interest">
+                    <li><span class="icon"><ion-icon name="game-controller-outline"></ion-icon>Gaming </span></li>
+                    <li><span class="icon"><ion-icon name="game-controller-outline"></ion-icon>Teaching </span></li>
+                    <li><span class="icon"><ion-icon name="book-outline"></ion-icon>Reading Books</span></li>
+                    <li><span class="icon"><ion-icon name="body-outline"></ion-icon>Yoga</span></li>
+                </ul>
+            </div>
+
+            <div class="rightSide">
+                <div class="about">
+                    <h3>Profile</h3>
+                    <p>My Name is G.Rushitha. I am an undergraduate student. I am pursuing my bachelor's degree in information technology in Vignan's Nirula Institute of technology and science for womens.<br><br>I am currently in my 3rd semester. I am an design thinking engineers. I have good coding skills and good knowledge on c,c++, python, data structures and algorithms, Databases Management System, Operating Systems.Aside of these I done an IBM Certification Course On Frontend Webdevelopment.
+                    </p>
+                </div>
+<br>
+<br>
+                <div class="about">
+                    <h3>Certifications</h3>
+                    <div class="box">
+                        <div class="year_company">
+                            <h5>Jan-Apr 2022</h5>
+                            <h5>NPTEL</h5>
+                        </div>
+                        <div class="text">
+                            <h4>Problem Solving Through Programmin In C</h4>
+                            <p>NPTEL Online certification on  problem solving through programming in c with a consolidated score of 61%.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                   <div class="box">
+                        <div class="year_company">
+<h5>28 Sep, 2022</h5>
+                            <h5>HackerRank</h5>
+                          
+                        </div>
+                        <div class="text">
+                            <h4>Python(Basic)</h4>
+                            <p>I have completed the python cerfification on hackerrank platform . </p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="box">
+                        <div class="year_company">
+                            <h5>IBM</h5>
+                            <h5>Coursera</h5>
+                        </div>
+                        <div class="text">
+                            <h4>Web Development with HTML, CSS, JavaScript Essentials</h4>
+                            <p>This badge earner has demonstrated foundational knowledge of Web Development with HTML, CSS, and JavaScript.The earner has hands-on experience creating a web application using HTML, CSS, and JavaScript.</p>
+                        </div>
+                    </div>
+                </div>
+<br>
+                <div class="about skills">
+                    <h3>Professional Skills</h3>
+                    <div class="box">
+                        <h4>C</h4>
+                        <span class="percent">
+                            <div style="width:95%;"></div>
+                        </span>
+                    </div>
+                    <div class="box">
+                        <h4>C++</h4>
+                        <span class="percent">
+                            <div style="width:85%;"></div>
+                        </span>
+                    </div>
+                    <div class="box">
+                        <h4>DBMS</h4>
+                        <span class="percent">
+                            <div style="width:80%;"></div>
+                        </span>
+                    </div>
+                    <div class="box">
+                        <h4>DSA</h4>
+                        <span class="percent">
+                            <div style="width:90%;"></div>
+                        </span>
+                    </div>
+                    <div class="box">
+                        <h4>OS</h4>
+                        <span class="percent">
+                            <div style="width:70%;"></div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
+
+
